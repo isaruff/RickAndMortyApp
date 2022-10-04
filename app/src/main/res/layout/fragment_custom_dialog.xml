@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pop_up_style"
+    android:padding="10dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/hard_rick_photo"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/firstTitle"
+                style="@style/light_text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/firstTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="First Title: " />
+
+            <TextView
+                android:id="@+id/firstTextView"
+                style="@style/light_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                app:layout_constraintBottom_toTopOf="@+id/secondTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstTitle"
+                tools:text="Sample Text" />
+
+            <TextView
+                android:id="@+id/secondTitle"
+                style="@style/light_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/secondTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstTextView"
+                tools:text="Second Title" />
+
+            <TextView
+                android:id="@+id/secondTextView"
+                style="@style/light_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                app:layout_constraintBottom_toTopOf="@id/thirdTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondTitle"
+                tools:text="Second Text" />
+
+            <TextView
+                android:id="@+id/thirdTitle"
+                style="@style/light_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/thirdTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondTextView"
+                tools:text="Third Title" />
+
+            <TextView
+                android:id="@+id/thirdTextView"
+                style="@style/light_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/thirdTitle"
+                tools:text="Third Text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

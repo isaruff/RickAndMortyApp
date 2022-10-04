@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.CharacterDetailsFragment">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_button_style"
+        android:drawableStart="@drawable/back_button_icon"
+        android:drawablePadding="10dp"
+        android:paddingHorizontal="20dp"
+        android:text="BACK"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/characterImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/horizontalGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/reverse_rick_outrage" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/top_rounded_corners"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalGuideline">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <TextView
+            android:id="@+id/characterNameTextView"
+            style="@style/shadow_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="5dp"
+            android:shadowColor="@color/black"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Reverse Rick Outrage" />
+
+        <ImageView
+            android:id="@+id/statusImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+            app:layout_constraintTop_toBottomOf="@id/characterNameTextView"
+            tools:background="@drawable/status_alive" />
+
+
+        <TextView
+            android:id="@+id/statusTextView"
+            style="@style/light_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/statusImageView"
+            app:layout_constraintTop_toTopOf="@id/statusImageView"
+            app:layout_constraintVertical_bias="0"
+            tools:text="Alive" />
+
+        <TextView
+            android:id="@+id/spacing"
+            style="@style/light_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@id/statusTextView"
+            app:layout_constraintStart_toEndOf="@id/statusTextView"
+            app:layout_constraintTop_toTopOf="@id/statusTextView" />
+
+        <TextView
+            android:id="@+id/speciesTextView"
+            style="@style/light_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/statusTextView"
+            app:layout_constraintStart_toEndOf="@id/spacing"
+            app:layout_constraintTop_toTopOf="@id/statusTextView"
+            tools:text="Human" />
+
+
+        <TextView
+            android:id="@+id/lastLocationTitle"
+            style="@style/dark_text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Last Known Location:"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+            app:layout_constraintTop_toBottomOf="@id/statusTextView" />
+
+        <TextView
+            android:id="@+id/lastLocationTextView"
+            style="@style/light_text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+            app:layout_constraintTop_toBottomOf="@id/lastLocationTitle"
+            tools:text="Citadel of Ricks" />
+
+        <TextView
+            android:id="@+id/firstSeenTitle"
+            style="@style/dark_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="First Seen In:"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+            app:layout_constraintTop_toBottomOf="@id/lastLocationTextView" />
+
+        <TextView
+            android:id="@+id/firstSeenEpisode"
+            style="@style/light_text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+            app:layout_constraintTop_toBottomOf="@id/firstSeenTitle"
+            tools:text="Citadel of Ricks" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

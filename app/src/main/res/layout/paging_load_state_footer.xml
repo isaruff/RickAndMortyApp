@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center_horizontal"
+    android:background="@color/light_gray">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/orange"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Could not be loaded"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        style="@style/shadow_style"
+        android:textColor="@color/orange"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_button_style"
+        android:text="RETRY"
+        android:textColor="@color/white"
+        android:paddingHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/retryButton"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
