@@ -34,7 +34,6 @@ class CharacterDetailsFragment : Fragment(R.layout.fragment_character_details) {
         val animation = TransitionInflater.from(context).inflateTransition(android.R.transition.move)
         sharedElementEnterTransition = animation
         postponeEnterTransition(200, TimeUnit.MILLISECONDS)
-        sharedElementReturnTransition = animation
         return binding.root
     }
 
