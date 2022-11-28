@@ -9,17 +9,13 @@ import android.view.ViewGroup
 import androidx.core.view.doOnPreDraw
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavDirections
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
-import androidx.paging.PagingData
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.rickandmortyapp.R
 import com.example.rickandmortyapp.adapters.CharactersLoadStateAdapter
 import com.example.rickandmortyapp.adapters.CharactersPagingAdapter
 import com.example.rickandmortyapp.databinding.FragmentCharactersBinding
-import com.example.rickandmortyapp.model.character_info.CharacterData
 import com.example.rickandmortyapp.utils.isOnline
 import com.example.rickandmortyapp.viewmodels.CharactersViewModel
 
@@ -74,8 +70,6 @@ class CharactersFragment : Fragment(R.layout.fragment_characters) {
                 characterImageView to characterData.image!!
             )
             findNavController().navigate(directions,extras)
-
-
         }
         binding.recyclerView.apply {
             characterAdapter = CharactersPagingAdapter(characterDataListener)

@@ -17,6 +17,7 @@ class CharactersViewModel(application: Application) : AndroidViewModel(applicati
 
     private val repository by lazy {
         NetworkRepository(ApiInitHelper.api)
+
     }
 
     val characterPageData = repository.getCharacterData().cachedIn(viewModelScope)

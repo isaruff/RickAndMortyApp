@@ -50,6 +50,7 @@ class CharacterDetailsFragment : Fragment(R.layout.fragment_character_details) {
 
 
 
+
     }
 
     override fun onDestroy() {

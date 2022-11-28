@@ -35,7 +35,6 @@ class CharactersPagingAdapter(private val onClickListener: OnClickListener) :
                 }
             }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharactersViewHolder {
@@ -53,10 +52,7 @@ class CharactersPagingAdapter(private val onClickListener: OnClickListener) :
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(
-            oldItem: CharacterData,
-            newItem: CharacterData
-        ): Boolean {
+        override fun areContentsTheSame(oldItem: CharacterData, newItem: CharacterData): Boolean {
             return oldItem.name == newItem.name && oldItem.image == newItem.image
         }
     }
