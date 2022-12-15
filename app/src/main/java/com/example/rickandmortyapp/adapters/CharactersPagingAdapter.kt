@@ -17,9 +17,11 @@ import com.example.rickandmortyapp.ui.fragments.CharactersFragmentDirections
 
 class CharactersPagingAdapter(private val onClickListener: OnClickListener) :
     PagingDataAdapter<CharacterData, CharactersPagingAdapter.CharactersViewHolder>(DiffCallBack()) {
+    
 
-    class CharactersViewHolder(val binding: CharacterItemBinding) :
+    inner class CharactersViewHolder(val binding: CharacterItemBinding) :
         RecyclerView.ViewHolder(binding.root)
+
 
     override fun onBindViewHolder(holder: CharactersViewHolder, position: Int) {
         val currentData = getItem(position)
