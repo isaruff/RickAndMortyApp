@@ -15,7 +15,7 @@ import com.example.rickandmortyapp.databinding.CharacterItemBinding
 import com.example.rickandmortyapp.model.character_info.CharacterData
 import com.example.rickandmortyapp.ui.fragments.CharactersFragmentDirections
 
-class CharactersPagingAdapter(private val onClickListener: OnClickListener) :
+class CharactersPagingAdapter(private val onClickListener: (data: CharacterData, image: ImageView)-> Unit) :
     PagingDataAdapter<CharacterData, CharactersPagingAdapter.CharactersViewHolder>(DiffCallBack()) {
     
 
@@ -33,7 +33,7 @@ class CharactersPagingAdapter(private val onClickListener: OnClickListener) :
                 }
                 characterImageView.transitionName = currentData.image
                 root.setOnClickListener {
-                    onClickListener.onClick(currentData,characterImageView)
+                    onClickListener(currentData,characterImageView)
                 }
             }
         }
@@ -59,12 +59,8 @@ class CharactersPagingAdapter(private val onClickListener: OnClickListener) :
         }
     }
 
-    class OnClickListener(val clickListener: (CharacterData, ImageView) -> Unit) {
-        fun onClick(
-            data: CharacterData,
-            characterImageView: ImageView,
-        ) = clickListener(data, characterImageView)
-    }
+
+
 }
 
 
